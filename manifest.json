@@ -1,0 +1,34 @@
+{
+
+  "manifest_version": 2,
+  "name": "BullsHide",
+  "version": "1.0",
+
+  "description": "Remove todo conteudo indesejado da sua timeline no facebook",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "60": "icons/icon-60.png",
+    "72": "icons/icon-72.png",
+    "76": "icons/icon-76.png",
+    "128": "icons/icon-128.png",
+    "256": "icons/icon-256.png",
+    "512": "icons/icon-512.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "bullshide@s1x.com.br",
+      "strict_min_version": "45.0.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["bullshide.js"]
+    }
+  ]
+
+}
