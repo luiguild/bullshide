@@ -1,7 +1,7 @@
 {
 
   "manifest_version": 2,
-  "name": "BullsHide",
+  "name": "FB|BullsHide",
   "version": "1.0",
 
   "description": "Remove todo conteudo indesejado da sua timeline no facebook",
@@ -24,8 +24,18 @@
     }
   },
 
+  "background": {
+    "scripts": ["jquery-1.11.0.min.js", "storage.js"]
+  },
+
+  "permissions": [
+    "webNavigation",
+    "storage"
+  ],
+
   "content_scripts": [
     {
+      "run_at": "document_start",
       "matches": ["*://*.facebook.com/*"],
       "js": ["bullshide.js"]
     }
